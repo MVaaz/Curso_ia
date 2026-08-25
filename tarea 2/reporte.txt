@@ -1,0 +1,14 @@
+Antes que nada, diseñé el nuevo mapa con la idea de que el agente tenga que matar a wumpus antes de poder agarrar el oro antes de leer la sección del reto del mapa
+difícil, por lo que solo hice este mapa.
+¿Qué agentes lograron salir con el oro en tu mapa y cuáles no?
+Ninguno logro salir, todos se quedaron girando en la posición inicial
+
+¿Por qué el agente de reflejo simple falla (o tiene suerte) en tu diseño?
+Viendo el código del agente, parece que detecta que hay una brisa y un olor alrededor de el, por lo que esta programado a girar cuando hay uno de ellos frente a el,
+esto junto con su programación de girar en las paredes hace que se quede atascado girando en la posición inicial. No logro encontrar donde modificar la posición de
+las brisas y los olores
+
+¿Cómo cambia el resultado del agente basado en modelo si acercas o alejas un pit de la casilla inicial?
+La configuración inicial con un pit en [2,1] hace que el agente se quede atascado girando en la posición inicial porque su reacción al encontrar un pit es moverse
+para evitarlo. Al mover el pit a [4,1], el agente logro matar a wumpus y completar el mapa sin problemas. Al mover el pit a [3,1], el agente logra moverse
+hasta wumpus pero no lo mata y se muere al moverse en su lugar.
